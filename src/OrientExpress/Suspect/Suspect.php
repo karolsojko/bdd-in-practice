@@ -4,13 +4,13 @@ namespace OrientExpress\Suspect;
 
 class Suspect
 {
-    const KEY_QUESTION = 'It was you!';
+    protected $keyQuestion = 'It was you!';
 
     protected $guilty = false;
 
     public function answer($question)
     {
-        if ($this->guilty && $question == self::KEY_QUESTION) {
+        if ($this->guilty && $question == $this->keyQuestion) {
             return 'Mmmkay I confess';
         }
 

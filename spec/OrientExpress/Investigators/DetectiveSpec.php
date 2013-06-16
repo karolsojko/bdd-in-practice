@@ -23,7 +23,6 @@ class DetectiveSpec extends ObjectBehavior
         $suspect1->answer('It was you!')->willReturn('Nope, not me');
         $suspect2->answer('It was you!')->willReturn('Mmmkay I confess');
 
-        //$this->solve($crime)->shouldReturn(Argument::type('OrientExpress\Suspect\Suspect'));
         $this->solve($crime)->shouldReturn($suspect2);
     }
 }
